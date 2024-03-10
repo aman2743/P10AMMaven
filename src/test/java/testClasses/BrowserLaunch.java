@@ -21,5 +21,7 @@ public static void main(String[] args) {
 	 driver.findElement(By.id("passw")).sendKeys("demo1234");
 	 driver.findElement(By.name("btnSubmit")).click();
 	 System.out.println(driver.getTitle()+":"+ driver.getPageSource());
+	 System.out.println(driver.getTitle()+":"+ driver.getCurrentUrl());
+
 }
 }
