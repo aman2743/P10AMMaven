@@ -22,6 +22,7 @@ public static void main(String[] args) {
 	 driver.findElement(By.name("btnSubmit")).click();
 	 System.out.println(driver.getTitle()+":"+ driver.getPageSource());
 	 System.out.println(driver.getTitle()+":"+ driver.getCurrentUrl());
+	 System.out.println(driver.getWindowHandle());
 
 }
 }
