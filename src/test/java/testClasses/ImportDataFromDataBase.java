@@ -3,7 +3,6 @@ package testClasses;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ImportDataFromDataBase {
@@ -15,10 +14,9 @@ public class ImportDataFromDataBase {
 			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/amandb1", "root", "admin");
 			System.out.println("Connection is successfull");
 			Statement stmt = connection.createStatement();
-			String[][] arr=new String[3][3];
+
 			ResultSet rs = stmt.executeQuery("select* from amandb1.emptable");
 			while (rs.next()) {
-				int i=0;
 				System.out.println(rs.getString("uname")+":"+rs.getInt("pwd"));
 			}
 
